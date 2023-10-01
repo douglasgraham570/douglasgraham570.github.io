@@ -1,0 +1,162 @@
+:root {
+  --main-bg-color: #83c8c1;
+  --main-bg-gradient: linear-gradient(to bottom right, #b6eee9, #5af7c8);
+}
+
+body,
+html {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.tab {
+  padding: 0 15px;
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 7vh;
+  justify-content: right;
+  align-items: center;
+  background-color: black;
+  z-index: 1;
+}
+
+.tab-container:last-child {
+  padding-right: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.welcome-container {
+  display: flex;
+  color: white;
+  /* background-color: var( */
+  /* --main-bg-color */
+  /* ); For browsers that do not support gradients */
+  background-image: var(--main-bg-gradient);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 900;
+  font-style: bold;
+  text-align: center;
+  padding: 0 50px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+h1,
+h2,
+h3 {
+  color: black;
+}
+
+h3,
+a {
+  font-size: 24;
+  font-weight: 400;
+}
+
+h3 {
+  padding: 0 30px;
+}
+
+#project-tab-click {
+  margin: -60px;
+  position: absolute;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 50px;
+}
+
+.project-tile {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  height: 400px;
+  background-color: #f6d2af;
+  object-fit: cover;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.project-name {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(228, 151, 67);
+  border-radius: 0 0 5px 5px;
+}
+
+.contact-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-bg-color);
+  background-image: var(--main-bg-gradient);
+  color: white;
+  height: 300px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+i {
+  padding-right: 3px;
+}
+
+/* Navbar is centered for small screens */
+@media (max-width: 600px) {
+  nav {
+    justify-content: center;
+  }
+
+  .tab-container:last-child {
+    padding-right: 0px;
+  }
+
+  .contact-container {
+    height: 500px;
+  }
+
+  .contact-links {
+    flex-direction: column;
+  }
+}
